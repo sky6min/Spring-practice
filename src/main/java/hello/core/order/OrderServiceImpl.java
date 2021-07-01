@@ -3,10 +3,12 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+//@RequiredArgsConstructor   lombok에서 자동으로 final 필드 참조하여 생성자를 만들어줌.
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
